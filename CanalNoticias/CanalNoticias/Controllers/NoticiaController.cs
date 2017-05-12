@@ -1,11 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using CanalNoticias.Data;
 using CanalNoticias.Models;
 using CanalNoticias.DataAccess;
 
@@ -38,13 +34,13 @@ namespace CanalNoticias.Controllers
         public async Task<IActionResult> Edit(int id)
         {
             if (id == 0)
-                return View("Edit");
+                return View("Details");
             else
             {
                 var noticia = await _noticiasDataAccess.ObterPorId(id);
                 if (noticia == null)
                     return NotFound();
-                return View("Edit", noticia);
+                return PartialView("Details", noticia);
             }
         }
 
@@ -61,7 +57,7 @@ namespace CanalNoticias.Controllers
 
         public IActionResult Create()
         {
-            return PartialView("Edit", new Noticia());
+            return PartialView("Details", new Noticia());
         }
 
         [HttpPost]
