@@ -1,0 +1,79 @@
+﻿<meta charset="utf-8" />
+@model IEnumerable<CanalNoticias.Models.Noticia>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Notícias</h2>
+<hr />
+<div id="detalhes">
+    @{ 
+        Html.Partial("Edit", new Noticia());
+    }
+    <p style="text-align:center">
+        <a class="btnVisualizarDetalhes" asp-action="Create">Incluir notícia</a>
+    </p>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FotoPrincipal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EhDestaque)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Data)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FotoPrincipal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EhDestaque)
+                </td>
+                <td>
+                    <a class="btnVisualizarDetalhes" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Remover</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.btnVisualizarDetalhes').on('click', function (e) {
+                $.get($(this).prop('href'), function (response) {
+                    $('#detalhes').html(response)
+                });
+                e.preventDefault();
+            });
+        });
+    </script>
+}
