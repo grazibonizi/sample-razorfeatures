@@ -1,6 +1,15 @@
 ﻿<meta charset="utf-8" />
 @model CanalNoticias.Models.Noticia
-
+@{
+    var imagens = new List<SelectListItem>()
+    {
+        new SelectListItem { Value = "arch-enemy.jpg", Text = "arch-enemy.jpg" },
+        new SelectListItem { Value = "epica.jpg", Text = "epica.jpg" },
+        new SelectListItem { Value = "ghost.jpg", Text = "ghost.jpg" },
+        new SelectListItem { Value = "nightwish.jpg", Text = "nightwish.jpg" },
+        new SelectListItem { Value = "sepultura.jpg", Text = "sepultura.jpg" }
+    };
+ }
 <form asp-action="Save">
     <div class="form-horizontal">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -29,7 +38,7 @@
         <div class="form-group">
             <label asp-for="FotoPrincipal" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <input asp-for="FotoPrincipal" class="form-control" />
+                <select class="form-control" asp-for="FotoPrincipal" asp-items="@imagens"></select>
                 <span asp-validation-for="FotoPrincipal" class="text-danger"></span>
             </div>
         </div>

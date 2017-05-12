@@ -34,13 +34,13 @@ namespace CanalNoticias.Controllers
         public async Task<IActionResult> Edit(int id)
         {
             if (id == 0)
-                return View("Details");
+                return View("_Details");
             else
             {
                 var noticia = await _noticiasDataAccess.ObterPorId(id);
                 if (noticia == null)
                     return NotFound();
-                return PartialView("Details", noticia);
+                return PartialView("_Details", noticia);
             }
         }
 
@@ -57,7 +57,7 @@ namespace CanalNoticias.Controllers
 
         public IActionResult Create()
         {
-            return PartialView("Details", new Noticia());
+            return PartialView("_Details", new Noticia());
         }
 
         [HttpPost]
