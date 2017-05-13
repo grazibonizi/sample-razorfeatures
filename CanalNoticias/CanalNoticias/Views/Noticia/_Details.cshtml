@@ -31,16 +31,16 @@
         </div>
         }
         <div class="form-group">
-            <label asp-for="Categoria" class="col-md-2 control-label"></label>
+            <label asp-for="EstiloMusical" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <select class="form-control" asp-for="Categoria" asp-items="@ListasService.ObterCategorias()"></select>
-                <span asp-validation-for="Categoria" class="text-danger"></span>
+                <select class="form-control" asp-for="EstiloMusical" asp-items="@ListasService.ObterEstilos()"></select>
+                <span asp-validation-for="EstiloMusical" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
             <label asp-for="FotoPrincipal" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <select class="form-control" asp-for="FotoPrincipal" asp-items="@ListasService.ObterImagens()"></select>
+                <select class="form-control" asp-for="FotoPrincipal" asp-items="@ListasService.ObterBandas()"></select>
                 <span asp-validation-for="FotoPrincipal" class="text-danger"></span>
             </div>
         </div>

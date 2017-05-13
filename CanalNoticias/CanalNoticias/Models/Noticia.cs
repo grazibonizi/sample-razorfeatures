@@ -10,12 +10,17 @@ namespace CanalNoticias.Models
     {
         public int Id { get; set; }
         public string TituloURL { get; set; }
+        [Display(Name = "Título")]
         public string Titulo { get; set; }
+        [Display(Name = "Descrição")]
         public string Descricao { get; set; }
         public DateTime Data { get; set; }
+        [Display(Name ="Banda")]
         public string FotoPrincipal { get; set; }
+        [Display(Name = "Destaque")]
         public bool EhDestaque { get; set; }
-        public string Categoria { get; set; }
+        [Display(Name = "Estilo Musical")]
+        public string EstiloMusical { get; set; }
 
         public void FormatarTituloUrl(string titulo)
         {

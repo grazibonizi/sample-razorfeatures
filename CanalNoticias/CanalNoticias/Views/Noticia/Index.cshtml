@@ -1,5 +1,6 @@
 ﻿<meta charset="utf-8" />
 @model IEnumerable<CanalNoticias.Models.Noticia>
+@inject CanalNoticias.Services.ListasService ListasService
 
 @{
     ViewData["Title"] = "Index";
@@ -20,7 +21,7 @@
                 @Html.DisplayNameFor(model => model.Titulo)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Descricao)
+                @Html.DisplayNameFor(model => model.EstiloMusical)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Data)
@@ -42,13 +43,13 @@
                     @Html.DisplayFor(modelItem => item.Titulo)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Descricao)
+                    @Html.DisplayFor(modelItem => item.EstiloMusical)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Data)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.FotoPrincipal)
+                    @ListasService.ObterNomeBanda(item.FotoPrincipal)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.EhDestaque)
