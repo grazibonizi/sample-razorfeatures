@@ -18,6 +18,7 @@
     <Content Include="wwwroot\images\ghost.jpg" />
     <Content Include="wwwroot\images\nightwish.jpg" />
     <Content Include="wwwroot\images\sepultura.jpg" />
+    <Content Include="wwwroot\lib\isotope\isotope.pkgd.min.js" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="6.0.2" />

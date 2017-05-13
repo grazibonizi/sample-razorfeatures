@@ -1,8 +1,8 @@
 @model IEnumerable<CanalNoticias.Models.Noticia>
-<ul>
+<ul class="isotope-container">
     @foreach (var item in Model)
     {
-        <li class="item_list" style="width: 350px;">
+        <li class="item_list isotope-item @item.EstiloMusical" style="width: 350px;">
             <a asp-area="" asp-controller="Noticia" asp-action="Details" asp-route-tituloURL="@item.TituloURL">
                 <div class="content_small">
                     <div class="content_small_left">
