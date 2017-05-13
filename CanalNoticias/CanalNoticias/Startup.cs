@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using CanalNoticias.Data;
+using CanalNoticias.DataAccess;
+using CanalNoticias.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using CanalNoticias.Data;
-using CanalNoticias.Models;
-using CanalNoticias.Services;
-using CanalNoticias.DataAccess;
 
 namespace CanalNoticias
 {
