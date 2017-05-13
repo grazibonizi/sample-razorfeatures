@@ -17,7 +17,6 @@ namespace CanalNoticias.DataAccess
             _context = context;
         }
 
-
         public async Task<IList<Noticia>> ObterTodos()
         {
             return await _context.Noticias.ToListAsync();

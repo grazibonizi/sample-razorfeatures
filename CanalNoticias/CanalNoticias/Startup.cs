@@ -54,6 +54,7 @@ namespace CanalNoticias
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
             services.AddTransient<INoticiaDataAccess, NoticiaDataAccess>();
+            services.AddTransient<ListasService, ListasService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

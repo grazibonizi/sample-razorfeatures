@@ -15,7 +15,7 @@ namespace CanalNoticias.Models
         public DateTime Data { get; set; }
         public string FotoPrincipal { get; set; }
         public bool EhDestaque { get; set; }
-        public List<Categoria> Categorias { get; set; }
+        public string Categoria { get; set; }
 
         public void FormatarTituloUrl(string titulo)
         {

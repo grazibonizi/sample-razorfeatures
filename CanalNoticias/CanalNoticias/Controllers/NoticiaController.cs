@@ -69,7 +69,6 @@ namespace CanalNoticias.Controllers
                 if (noticia.Id.Equals(0))
                 {
                     noticia.FormatarTituloUrl(noticia.Titulo);
-                    noticia.Categorias = new List<Categoria>(0);
                     noticia.Data = DateTime.Now;
                     await _noticiasDataAccess.Criar(noticia);
                 }
