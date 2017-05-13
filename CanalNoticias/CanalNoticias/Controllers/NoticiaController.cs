@@ -21,6 +21,7 @@ namespace CanalNoticias.Controllers
             return View(await _noticiasDataAccess.ObterTodos());
         }
 
+        [Route("/noticias/{tituloUrl}")]
         public async Task<IActionResult> Details(string tituloUrl)
         {
             if (string.IsNullOrEmpty(tituloUrl))

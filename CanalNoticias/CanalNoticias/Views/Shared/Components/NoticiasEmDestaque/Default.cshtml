@@ -2,11 +2,11 @@
 <ul>
     @foreach (var item in Model)
     {
-        <li class="item_list" style="width: 350px;">
+        <li class="item_list">
             <a asp-area="" asp-controller="Noticia" asp-action="Details" asp-route-tituloURL="@item.TituloURL">
                 <div class="content_small">
                     <div class="content_small_left">
-                        <img alt="" src="../images/@item.FotoPrincipal">
+                        <imagem-banda foto="@item.FotoPrincipal" />
                     </div>
                     <div class="content_small_right">
                         @item.Titulo
