@@ -5,7 +5,7 @@
 <form asp-action="Save">
     <div class="form-horizontal">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="Id" />
         <div class="form-group">
             <label asp-for="Titulo" class="col-md-2 control-label"></label>
             <div class="col-md-10">
@@ -22,13 +22,13 @@
         </div>
         @if (Model.Id > 0)
         {
-        <div class="form-group">
-            <label asp-for="Data" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
-                <input asp-for="Data" class="form-control" />
-                <span asp-validation-for="Data" class="text-danger"></span>
+            <div class="form-group">
+                <label asp-for="Data" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="Data" class="form-control" />
+                    <span asp-validation-for="Data" class="text-danger"></span>
+                </div>
             </div>
-        </div>
         }
         <div class="form-group">
             <label asp-for="EstiloMusical" class="col-md-2 control-label"></label>
@@ -53,9 +53,9 @@
             </div>
         </div>
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10" style="text-align:center">
+            <p style="text-align:right">
                 <input type="submit" value="Salvar" class="btn btn-default" />
-            </div>
+            </p>
         </div>
     </div>
 </form>

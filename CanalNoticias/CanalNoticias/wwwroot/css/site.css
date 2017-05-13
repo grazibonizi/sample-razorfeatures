@@ -26,6 +26,7 @@ textarea {
 .carousel-caption p {
     font-size: 20px;
     line-height: 1.4;
+    background-color:rgba(0,0,0,.5);
 }
 
 /* buttons and links extension to use brackets: [ click me ] */
@@ -54,6 +55,21 @@ textarea {
         display: none;
     }
 }
+
+a, a:hover {
+    text-decoration: none;
+    color: #2f2f2f;
+}
+
+table tr{
+    vertical-align:middle;
+}
+
+#detalhes
+{
+    width:75%;
+}
+
 /** LISTS **/
 ul {
     list-style: none;
@@ -94,4 +110,8 @@ ul {
     width: 68%;
     vertical-align: middle;
     text-align: justify;
+}
+/*ISOTOPE*/
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    background-color: #cd3c2e;
 }

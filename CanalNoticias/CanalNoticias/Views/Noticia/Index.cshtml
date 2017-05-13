@@ -10,21 +10,16 @@
 <h2>Notícias</h2>
 <hr />
 <div id="detalhes">
-    <p style="text-align:center">
-        <a class="btnVisualizarDetalhes" asp-action="Create">Incluir notícia</a>
+    <p style="text-align:right">
+        <a class="btnVisualizarDetalhes btn btn-default" asp-action="Create">Incluir notícia</a>
     </p>
 </div>
-<table class="table">
+<hr />
+<table class="table table-striped">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Titulo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EstiloMusical)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Data)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.FotoPrincipal)
@@ -32,7 +27,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.EhDestaque)
             </th>
-            <th></th>
+            <th>Ações</th>
         </tr>
     </thead>
     <tbody>
@@ -43,20 +38,14 @@
                     @Html.DisplayFor(modelItem => item.Titulo)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.EstiloMusical)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Data)
-                </td>
-                <td>
                     @ListasService.ObterNomeBanda(item.FotoPrincipal)
                 </td>
-                <td>
+                <td style="text-align:center">
                     @Html.DisplayFor(modelItem => item.EhDestaque)
                 </td>
                 <td>
-                    <a class="btnVisualizarDetalhes" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Remover</a>
+                    <a class="btnVisualizarDetalhes btn btn-xs btn-default" asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+                    <a class="btn btn-xs btn-default" asp-action="Delete" asp-route-id="@item.Id">Remover</a>
                 </td>
             </tr>
         }
