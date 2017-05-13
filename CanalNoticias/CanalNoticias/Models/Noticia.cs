@@ -23,7 +23,6 @@ namespace CanalNoticias.Models
         [Display(Name = "Destaque")]
         public bool EhDestaque { get; set; }
         [Display(Name = "Estilo Musical")]
-        [Required]
         public string EstiloMusical { get; set; }
 
         public void FormatarTituloUrl(string titulo)
