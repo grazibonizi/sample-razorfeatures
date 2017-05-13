@@ -90,6 +90,13 @@ ul {
     width: 350px;
 }
 
+.item_list > a:hover{
+    background-color:rgba(0,0,0,.3);
+    height:100%;
+    width:100%;
+    display:block;
+}
+
 .content_small {
     display: inline;
     font-weight: 100;
